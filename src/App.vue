@@ -1,15 +1,19 @@
 <script setup>
-import Header from "./components/Header.vue";
-import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <Header />
-  <div class="wrapper">
+  <!-- <Header /> -->
+  <!-- <div class="wrapper">
     <HelloWorld msg="📔 Ebook 📔" />
-  </div>
+  </div>-->
 
-  <RouterView />
+  <!-- <RouterView /> -->
+  <div id="app">
+    <!-- <component :is="layout">
+      <RouterView />
+    </component>-->
+    <router-view />
+  </div>
 </template>
 
 <style lang="scss" scoped>

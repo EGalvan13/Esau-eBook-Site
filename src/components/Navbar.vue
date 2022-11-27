@@ -1,6 +1,14 @@
-<script>
+<script setup>
 import { RouterLink } from "vue-router";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
+
+const onClickLogout = () => {
+  console.log("clicked on logout");
+  localStorage.setItem("TOKEN", "");
+  router.push("/login");
+};
 </script>
 
 <template>
@@ -8,7 +16,7 @@ import { RouterLink } from "vue-router";
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/contact">Contact</RouterLink>
-    <RouterLink to="/login">Login</RouterLink>
+    <button class="text-white" @click="onClickLogout()">Logout</button>
   </nav>
 </template>
 
